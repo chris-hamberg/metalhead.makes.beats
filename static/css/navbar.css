@@ -1,0 +1,18 @@
+li {list-style: none;}
+.nav {display: flex; width: 97.7vw; margin-left: -3vw; justify-content: space-evenly;}
+
+.nav-link {color: white;}
+
+.nav-button {
+            background-color: #131113;
+            color: #306555;
+            color: black;
+            color: white;
+            font-family: "Noto Serif";
+            width: 10vw; height: 3vw;
+            padding: 1hw; margin-bottom: 0vh; margin-top: 0.7vw; border: none;
+            margin-left: 0.4vw; margin-right: 0.4vw;
+            border-radius: 7px; outline: none; cursor: pointer;
+            box-shadow: 1px 3px 10px #050505;
+            transition: 0.8s opacity, 1.5s background-color;}
+.nav-button:hover {background-color: #AA00DD;}

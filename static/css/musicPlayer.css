@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {background-color: #00FF00;
+            /*background-color: #335649;*/
+            color: #306555; 
+            color: black;
+            font-family: "Noto Serif";
+            width: 97.7vw; height: 9vw;
+            padding: 1vh; margin-bottom: 0vh; border: none;
+            border-radius: 7px; outline: none; cursor: pointer;
+            /*box-shadow: 1px 3px 10px black;*/
+            transition: 5s background-color;}
+.accordion:after {content: ""; display: table; clear: both;}
+
+
+/* Top Banner */
+.a-btn-txt {font-size: 5vw; margin: 0vw; margin-top: 0.2vw;}
+
+.material-icons.md-48.header-icon {float: right; font-size: 7vw; margin-top: -6.9vw; 
+                                   margin-right: 0vw; opacity: 0.54; transition: 0.8s;}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {background-color: #292429; width: 97.7vw; max-height: 0; overflow: hidden;
+        transition: max-height 1.5s ease-out; margin-top: -0.9%;}

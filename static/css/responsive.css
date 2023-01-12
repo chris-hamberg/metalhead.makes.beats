@@ -1,0 +1,103 @@
+@media (max-width: 1200px) {
+    /*body {background-color: red;}*/
+    article {font-size: 2.5vw;}
+    .banner-728 {display: block;}
+    .banner-468 {display: none;}
+    .banner-234 {display: none;}
+}
+
+
+@media (max-width: 803px), (max-width: 812) and (orientation: landscape) {
+    /*body {background-color: blue;}*/
+    article {font-size: 3vw;}
+    .blog {width: 95vw;}
+    .social-media-buttons {width: 95vw;}
+    .banner-728 {display: none;}
+    .banner-468 {display: block;}
+    .banner-234 {display: none;}
+    .amzn-banner-234 {display: none;}
+}
+
+
+@media (max-width: 549px) {
+    /*body {background-color: blue;}*/
+    article {font-size: 3.5vw;}
+    .banner-728 {display: none;}
+    .banner-468 {display: none;}
+    .banner-234 {display: block;}
+    .amzn-banner-234 {display: block;}
+}
+
+
+
+
+/*
+@media (max-width: 982px) {
+    /*body {background-color: blue;}*//*
+    .social-media-buttons {width: 49.5vw;}
+}
+
+
+@media (max-width: 801px) {
+    /*body {background-color: red;}*//*
+    article {font-size: 2.8vw;}
+    .social-media-buttons {width: 95vw;}
+    .twitter {width: 60vw;}
+    .blog {width: 95vw;}
+    .site-footer {margin-top: -35vh;}
+    .title {font-size: 2.1vw;}
+    .desc {font-size: 1.9vw;}
+    .footer-error {margin-top: 9vh; margin-bottom: 50vh;}
+@-moz-document url-prefix() {
+    article {font-size: 2.2vw;}
+}
+
+
+
+
+@media (max-width: 485px) {
+    .twitter {width: 75vw;}
+}
+
+
+
+@media (max-height: 480px) {
+    article {margin-top: 20vh;}
+}
+
+
+@media (max-width: 395px) {
+    .twitter {width: 60vw;}
+    .twitter-share-button {display: none;}
+}
+
+
+@media (max-height: 380px) {
+    article {margin-top: 22vh;}
+}
+
+
+@media (max-width: 305px) {
+    .paypal {display:none;}
+}
+
+
+@media (max-height: 280px) {
+    article {margin-top: 25vh;}
+}
+
+
+@media (max-width: 225px) {
+    .twitter-follow-button {display: none;}
+    .paypal {display: block;}
+}
+
+
+@media (max-height: 190px) {
+    article {margin-top: 30vh;}
+}
+
+
+@media (max-height: 125px) {
+    article {margin-top: 40vh;}
+}*/

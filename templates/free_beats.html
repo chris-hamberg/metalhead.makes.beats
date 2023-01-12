@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+
+    <!--script type="text/javascript" 
+            src="https://www.rl2lnk.com/k9jnvAuGsPPMKeM8">
+    </script-->
+
+    <script type="text/javascript" 
+            src="https://www.rl2lnk.com/{{ beat.locker_hash }}">
+    </script>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+    <section class="free-beat-nav">
+        <a class="free-beat-nav-button" href="{{ beat.next }}">
+            <div class="free-beat-nav-button-components">
+                <p class="free-beat-nav-button-text">
+                    <strong>NEXT FREE BEAT</strong>
+                </p>
+                <i class="material-icons md-48 free-beat-nav-button-arrow">
+                    arrow_circle_right
+                </i>
+            </div>
+        </a>
+    </section>
+
+    <section class = "free-beat">
+        <button class="free-beat-link clocker-offer" 
+                onClick="loadLocker({{ beat.locker_id }});">
+            <div class="free-beat-link-components">
+                <i class="material-icons md-48 free-beat-link-icon">
+                    cloud_download
+                </i>
+                <p class="free-beat-link-label">
+                    <strong>Click to download:</strong>
+                </p>
+                <p class="free-beat-link-link">
+                    {{ beat.id }} MΞTALHEΔD MΛKΞS BΞΔTS FREE.mp3
+                </p>
+                <i class="material-icons md-48 free-beat-link-icon">
+                    cloud_download
+                </i>
+            </div>
+        </button>
+
+        <div class="free-beat-password">
+            <p class="free-beat-password-attn-label">
+                <strong>!IMPORTANT!</strong>
+            </p>
+            <p class="free-beat-password-label">
+                <strong>PASSWORD:</strong>
+            </p>
+            <p class="free-beat-password-password">
+                <strong>FREE-BEAT</strong>
+            </p>
+        </div>
+
+    </section>
+
+{% endblock %}

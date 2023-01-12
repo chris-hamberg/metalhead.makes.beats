@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    {% block error %}
+
+    {% endblock %}
+
+    <a class="home" href="{{ url_for('index') }}">
+        <i class="material-icons md-48 error-home">home</i>
+    </a>
+
+    <footer class="footer-error">
+        <p class="logo">MΞTALHEΔD MΛKΞS BΞΔTS</p>
+        <p>&#169; 2022</p>
+    </footer>
+
+{% endblock %}

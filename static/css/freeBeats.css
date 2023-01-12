@@ -1,0 +1,48 @@
+@keyframes changeFont {
+    from {
+        font-size: 4vw;
+        color: #33FFBB; 
+    }
+
+    to {
+        font-size: 7.5vw;
+        color: #FFFFFF;
+    }
+}
+
+
+.free-beat-nav {float: right; padding-top: 1vw; padding-right: 2vw;}
+.free-beat-nav-button {color: #BB33FF; transition: 1s color;}
+.free-beat-nav-button-components {display: flex; align-items: center; margin-top: 1vw;
+        margin-right: 1.5vw;}
+.free-beat-nav-button-text {font-size: 2vw; margin-right: 1vw;}
+.material-icons.md-48.free-beat-nav-button-arrow {font-size: 4vw;}
+.free-beat-nav-button:hover {color: #33FF99;}
+.free-beat-nav-button:hover {color: #33FFBB;}
+
+
+.free-beat {width: 97vw; text-align: center; padding-top: 9vw;
+            padding-bottom: 5vw;}
+.free-beat-link {background-color: #111111; border-style: none; width: 98vw;
+        cursor: pointer; font-size: 2.8vw;}
+.free-beat-link-components {display: flex; flex-direction: row; 
+        justify-content: space-evenly; align-items: center;}
+.material-icons.md-48.free-beat-link-icon {color: #33FFBB; font-size: 4vw;}
+.free-beat-link-label {color: #CCFF00; margin-right: 0vw;}
+.free-beat-link-link {color: #33FFBB; transition: 1s color;}
+.free-beat-link-components:hover > .free-beat-link-link {color: #BB33FF;}
+.material-icons.md-48.free-beat-link-icon {
+        animation-duration: 1.5s;
+        animation-name: changeFont;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+
+.free-beat-password {display: flex; flex-direction: row; align-items: center; 
+        justify-content: center; margin-top: 0.1vw; font-size: 2.3vw; 
+        margin-bottom: 5vw;}
+.free-beat-password-attn-label {color: #CCFF00; font-size: 2.5vw; 
+        margin-right: 2.4vw;}
+.free-beat-password-label {color: #BB33FF; margin-right: 2vw;}
+.free-beat-password-password {color: #33FFBB;}

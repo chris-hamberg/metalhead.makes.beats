@@ -1,0 +1,38 @@
+{% extends "super_blog.html" %}
+
+
+{% block blog %}
+
+
+    <!-- AdCash Popup -->
+    <script data-cfasync="false" type="text/javascript" src="//onclickprediction.com/a/display.php?r=6375582">
+    </script>
+
+
+    <section class="blog">
+
+        <h1 class="article-title">{{ article.title }}</h1>
+
+        {% include "social.html" %}
+
+        <article>
+
+            {{ article.text }}
+    
+        </article>
+
+
+    </section>
+
+    <section class="comments">
+        <div class="fb-comments" 
+            data-colorscheme="dark"
+            data-href="https://metalheadmakesbeats.com/blog?article={{ article.id }}" 
+            data-width="100%" 
+            data-numposts="5"
+            data-lazy="true">
+        </div>
+    </section>
+
+
+{% endblock %}

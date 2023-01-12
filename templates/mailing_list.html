@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <section class="mailing-list mailing-list-flex">
+
+        <form action="/mailing-list" method="POST">
+
+            {{ html_form.csrf_token }}
+
+            <div class="mailing-list-form mailing-list-flex mailing-list-width">
+                <div class="mailing-list-title mailing-list-flex mailing-list-width">
+                    <h2>Subscribe to Mailing List!</h2>
+                </div>
+                <div class="mailing-list-container mailing-list-flex mailing-list-width">
+                    <div class="mailing-list-fields">
+                        <div class="mailing-list-input">
+                            {{ html_form.first(placeholder="first name") }}
+                        </div>
+                    </div>
+                    <div class="mailing-list-error-wrapper">
+                        {% if html_form.first.errors %}
+                            <ul class="mailing-list-errors">
+                                {% for error in html_form.first.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="mailing-list-container mailing-list-flex mailing-list-width">
+                    <div class="mailing-list-fields">
+                        <div class="mailing-list-input">
+                            {{ html_form.last(placeholder="last name") }}
+                        </div>
+                    </div>
+                    <div class="mailing-list-error-wrapper">
+                        {% if html_form.last.errors %}
+                            <ul class="mailing-list-errors">
+                                {% for error in html_form.last.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="mailing-list-container mailing-list-flex mailing-list-width">
+                    <div class="mailing-list-fields">
+                        <div class="mailing-list-input">
+                            {{ html_form.email(placeholder="email") }}
+                        </div>
+                    </div>
+                    <div class="mailing-list-error-wrapper">
+                        {% if html_form.email.errors %}
+                            <ul class="mailing-list-errors">
+                                {% for error in html_form.email.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="mailing-list-container mailing-list-flex mailing-list-width">
+                    <div class="mailing-list-fields">
+                        <div class="mailing-list-input">
+                            {{ html_form.confirm(placeholder="confirm email") }}
+                        </div>
+                    </div>
+                    <div class="mailing-list-error-wrapper">
+                        {% if html_form.confirm.errors %}
+                            <ul class="mailing-list-errors">
+                                {% for error in html_form.confirm.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="mailing-list-container mailing-list-flex mailing-list-width">
+                    <div class="mailing-list-footer">
+                        <div class="mailing-list-recaptcha">
+                            {{ html_form.recaptcha }}
+                        </div>
+                        <div class="mailing-list-submit mailing-list-flex">
+                            {{ html_form.submit }}
+                        </div>
+                    </div>
+
+                    <div class="mailing-list-error-wrapper">
+                        {% if html_form.recaptcha.errors %}
+                            <ul class="mailing-list-errors">
+                                {% for error in html_form.recaptcha.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+
+    </section>
+
+{% endblock %}

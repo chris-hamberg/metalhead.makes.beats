@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>{{ base_url }}</loc>
+        <lastmod>2022-10-22</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+
+    <url>
+        <loc>{{ base_url }}feeds/</loc>
+        <lastmod>{{ articles[-1].date }}</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+
+    <url>
+        <loc>{{ base_url }}home/</loc>
+        <lastmod>{{ articles[-1].date }}</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+
+    <url>
+        <loc>{{ base_url }}mailing-list/</loc>
+        <lastmod>2022-10-26</lastmod>
+        <changefreq>never</changefreq>
+    </url>
+
+    {% for beat in free_beats %}
+    <url>
+        <loc>{{ base_url }}free-beat?id={{ beat }}</loc>
+        <lastmod>2022-10-22</lastmod>
+        <changefreq>never</changefreq>
+    </url>
+    {% endfor %}
+
+    <url>
+        <loc>{{ base_url }}blog/</loc>
+        <lastmod>{{ articles[-1].date }}</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+
+    {% for page_number in range(pages) %}
+    <url>
+        <loc>{{ base_url }}blog?page={{ page_number + 1 }}</loc>
+        <lastmod>{{ articles[page_number * 5].date }}</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+    {% endfor %}
+
+    {% for article in articles %}
+    <url>
+        <loc>{{ base_url }}blog?article={{ article.id }}</loc>
+        <lastmod>{{ article.date }}</lastmod>
+        <changefreq>never</changefreq>
+    </url>
+    {% endfor %}
+    
+</urlset>

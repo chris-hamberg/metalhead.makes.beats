@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/*
+Allow: /*
+Noindex: /api/*
+Crawl-Delay: 1
+
+Sitemap: https://metalheadmakesbeats.com/sitemap.xml

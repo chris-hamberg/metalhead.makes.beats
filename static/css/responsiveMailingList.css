@@ -1,0 +1,152 @@
+@media (max-width: 1300px), (max-width: 1452px) and (orientation: landscape){
+    .mailing-list {margin-top: 0vw;}
+    .mailing-list-width {width: 48vw;}
+    .mailing-list-form {height: 37vw;}
+    .mailing-list-title {font-size: 2vw; margin-top: -6vw; 
+        margin-bottom: -3vw;}
+    .mailing-list-input {margin-top: 1vw; margin-bottom: 1vw;}
+    #first, #last, #email, #confirm {width: 37vw;}
+    .mailing-list-footer {width: 37vw; margin-top: 1.4vw; 
+            justify-content: space-between;}
+    #submit {width: 11vw; margin-left: -1vw;}
+    .mailing-list-errors {width: 37vw; margin-top: 1.8vw; margin-bottom: -3vw;}
+}
+
+
+
+@media (max-width: 1170px) {
+    .mailing-list-width {width: 50vw;}
+    .mailing-list-form {height: 42vw;}
+    .mailing-list-title {font-size: 2.1vw; margin-top: -7vw; 
+        margin-bottom: -4.5vw;}
+    .mailing-list-input {margin-top: 1.5vw; margin-bottom: 1.5vw;}
+    #first, #last, #email, #confirm {width: 40vw;}
+    .mailing-list-footer {width: 40vw; margin-top: 2vw;}
+    #submit {width: 10.5vw; margin-left: 0vw;}
+    .mailing-list-errors {width: 40vw;}
+}
+
+
+
+@media (max-width: 1030px), (max-width: 1030px) and (orientation: landscape) {
+    .mailing-list-form {height: 49vw;}
+    .mailing-list-title {font-size: 2.2vw; margin-top: -9vw;}
+    .mailing-list-input {margin-top: 2vw; margin-bottom: 2vw;}
+    #first, #last, #email, #confirm {font-size: 1.8vw;}
+    #submit {width: 8vw;}
+    .mailing-list-errors {margin-top: 2vw; margin-bottom: -2vw;}
+}
+
+
+
+@media (max-width: 950px) {
+    .mailing-list {margin-top: -11vw;}
+    .mailing-list-width {width: 60vw;}
+    .mailing-list-form {height: 70vw; background-color: transparent; 
+        box-shadow: none;}
+    .mailing-list-title {font-size: 2.6vw; margin-top: -7vw;}
+    .mailing-list-input {margin-bottom: 2.2vw;}
+    #first, #last, #email, #confirm {width: 50vw; font-size: 2.2vw;}
+    .mailing-list-footer {width: 50vw; margin-top: 4vw;}
+    #submit {width: 14vw; margin-left: -3vw;}
+    .mailing-list-errors {width: 50vw; margin-top: 2.1vw; margin-bottom: -2.1vw;}
+}
+
+
+
+@media (max-width: 860px) {
+    .mailing-list {margin-top: -9vw;}
+    .mailing-list-width {width: 70vw;}
+    .mailing-list-title {font-size: 3vw; margin-top: -5vw;}
+    .mailing-list-input {margin-top: 2.5vw; margin-bottom: 2.5vw;}
+    #first, #last, #email, #confirm {width: 60vw; font-size: 2.4vw;}
+    .mailing-list-footer {width: 60vw;}
+    #submit {width: 22vw; margin-left: -10vw;}
+    .mailing-list-errors {width: 60vw;}
+}
+
+
+
+@media (max-width: 800px) {
+    .mailing-list {margin-top: -12vw;}
+    .mailing-list-width {width: 80vw;}
+    .mailing-list-form {height: 80vw;}
+    .mailing-list-title {font-size: 3.5vw;}
+    #first, #last, #email, #confirm {width: 70vw; font-size: 2.8vw;}
+    .mailing-list-footer {width: 70vw; margin-top: 7vw;}
+    #submit {20vw; margin-left: -8vw;}
+    .mailing-list-errors {width: 70vw; margin-top: 2.4vw; margin-bottom: -2.4vw;}
+}
+
+
+
+@media (max-width: 675px) {
+    .mailing-list {margin-top: -5vw;}
+    .mailing-list-title {font-size: 4vw; margin-bottom: -3vw;}
+    .mailing-list-input {margin-top: 3vw; margin-bottom: 3vw;}
+    #first, #last, #email, #confirm {font-size: 3vw;}
+    #submit {width: 18vw;}
+}
+
+
+
+@media (max-width: 600px) {
+    .mailing-list-width {width: 90vw;}
+    .mailing-list-form {height: 90vw;}
+    .mailing-list-title {font-size: 4.5vw;}
+    .mailing-list-input {margin-top: 4vw; margin-bottom: 4vw;}
+    #first, #last, #email, #confirm {width: 80vw; font-size: 3.5vw;}
+    .mailing-list-footer {width: 80vw;}
+    .mailing-list-errors {width: 80vw;}
+}
+
+
+
+@media (max-width: 550px) {
+    .mailing-list {margin-top: 0vw;}
+    .mailing-list-input {margin-top: 4.5vw; margin-bottom: 4.5vw;}
+    #first, #last, #email, #confirm {font-size: 4vw;}
+    #submit {height: 77px; width: 18vw; margin-left: -8vw;}
+}
+
+
+@media (max-width: 490px) {
+    .mailing-list-form {height: 110vw;}
+    .mailing-list-footer {flex-direction: column; align-items: center;}
+    #submit {width: 301px; margin-left: 0vw; margin-top: 3vw;}
+}
+
+
+@media (max-width: 450px) {
+    .mailing-list-form {height: 120vw;}
+}
+
+
+@media (max-width: 360px) {
+    .mailing-list-form {height: 130vw;}
+}
+
+
+@media (max-width: 305px) {
+    .mailing-list-form {height: 140vw;}
+}
+
+
+@media (max-width: 259px) {
+    .mailing-list-form {height: 160vw;}
+}
+
+
+@media (max-width: 200px) {
+    .mailing-list-form {height: 200vw;}
+}
+
+
+@media (max-width: 139px) {
+    .mailing-list-form {height: 300vw;}
+}
+
+
+@media (max-width: 78px) {
+    .mailing-list-form {height: 1000vw;}
+}

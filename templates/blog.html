@@ -1,0 +1,40 @@
+{% extends "super_blog.html" %}
+
+{% block blog %}
+
+    <section class="blog-directory">
+
+        <div class="blog-directory-title">
+            <h1>Article Directory</h1>
+        </div>
+
+        <div class="blog-nav">
+            <a class="blog-nav-link" href="{{ base_url}}{{ prev }}"><<< Previous Page</a>
+            <a class="blog-nav-link" href="{{ base_url }}{{ _next }}">Next Page >>></a>
+        </div>
+
+        {% for post in posts %}
+                <a class="blog-card-link" href="{{ base_url }}blog?article={{ post.id }}">
+                    <div class="blog-card">
+                        <div class="blog-card-title">
+                            <p>{{ post.title }}</p>
+                        </div>
+                        <div class="blog-card-meta">
+                            <p class="blog-card-meta-p"><em>Author: {{ post.author }}</em></p>
+                            <p class="blog-card-meta-p"><em>Published: {{ post.date }}</em></p>
+                        </div>
+                        <div class="blog-card-desc">
+                            <p><em>{{ post.desc }}</em></p>
+                        </div>
+                    </div>
+                </a>
+        {% endfor %}
+
+        <div class="blog-nav blog-nav-bottom">
+            <a class="blog-nav-link" href="{{ base_url }}{{ prev }}"><<< Previous Page</a>
+            <a class="blog-nav-link" href="{{ base_url }}{{ _next }}">Next Page >>></a>
+        </div>
+
+    </section>
+
+{% endblock %}

@@ -36,7 +36,7 @@ from datetime import datetime
 from model.crud import create_tables
 
 
-create_tables()
+#create_tables()
 
 
 app = Flask(__name__)
@@ -46,6 +46,7 @@ app.config["RECAPTCHA_PUBLIC_KEY"] = "6Lc2KLoiAAAAAPO4kOMst4yjw3RC__7AypNUTm8k"
 app.config["RECAPTCHA_PRIVATE_KEY"] = "6Lc2KLoiAAAAALxo_lFU52Ry5sV9_jSZ0qdecZmF"
 api = Api(app)
 
+create_tables()
 
 api.add_resource(BlogReadDeleteInterface, "/api/article/<int:id>")
 api.add_resource(BlogCreateUpdateInterface, "/api/article/")

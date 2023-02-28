@@ -1,7 +1,6 @@
 import os, psycopg2, urllib.parse
 from datetime import datetime
 try:
-    raise ModuleNotFoundError
     from model.conf import *
 except ModuleNotFoundError as production:
     from model.config import *

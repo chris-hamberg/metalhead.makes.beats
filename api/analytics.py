@@ -61,3 +61,17 @@ class AnalyticsReadInterface(Resource):
                 "last_visit": dat[9]
                 } for dat in data]
             return json, 200
+        else: return "Unauthorized", 401
+
+
+    @marshal_with(analytic)
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument("password", type = str, required = True,
+                help = "Password is required")
+        args = parser.parse_args()
+        password = args.get("password")
+        if authenticated(password):
+            json = analytics.create(args)
+            return json, 200
+        else: return "Unauthorized", 401

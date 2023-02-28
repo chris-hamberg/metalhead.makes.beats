@@ -33,6 +33,11 @@ from collections import namedtuple
 from urllib.parse import urljoin
 from datetime import datetime
 
+from model.crud import create_tables
+
+
+create_tables()
+
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -187,7 +192,7 @@ def success():
     return render_template("success.html", base_url = base_url)
 
 
-if __name__ == "__main__":
-    app.run(host = app.config["HOST"],
-            port = app.config["PORT"],
-            debug = app.config["DEBUG"])
+#if __name__ == "__main__":
+#    app.run(host = app.config["HOST"],
+#            port = app.config["PORT"],
+#            debug = app.config["DEBUG"])

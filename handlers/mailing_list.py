@@ -4,7 +4,7 @@ from wtforms.validators import Email
 from wtforms import SubmitField
 from wtforms import StringField
 from wtforms import validators
-from wtforms import EmailField
+from wtforms.fields.html5 import EmailField
 
 from flask_wtf import RecaptchaField
 from flask_wtf import Recaptcha

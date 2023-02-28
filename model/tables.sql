@@ -33,6 +33,6 @@ CREATE TABLE IF NOT EXISTS mailing_list (
 
 CREATE TABLE IF NOT EXISTS free_beat (
     id          VARCHAR(5) PRIMARY KEY NOT NULL,
-    url         VARCHAR(255) NOT NULL
+    url         VARCHAR(255) NOT NULL,
     locker      INTEGER,
     next        VARCHAR(17));

@@ -13,6 +13,15 @@ ADMIN = {"database": DATABASE,
          "port"    : DB_PORT}
 
 
+def create_tables():
+    tables = "model/tables.sql"
+    with open(tables, 'r') as fhand:
+        sql = fhand.read()
+    with psycopg2.connect(**ADMIN) as connection:
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        connection.commit()
+        
 
 class MailingList:
 

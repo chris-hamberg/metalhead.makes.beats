@@ -91,6 +91,7 @@ class AnalyticsReadInterface(Resource):
                 help = "last_visit is required")
         args = parser.parse_args()
         password = args.get("password")
+        print(args)
         if authenticated(password):
             json = analytics.create(args)
             return json, 200

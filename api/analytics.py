@@ -85,10 +85,8 @@ class AnalyticsReadInterface(Resource):
                 help = "bot is required")
         parser.add_argument("visits", type = int, required = True,
                 help = "visits is required")
-        parser.add_argument("created", type = str, required = True,
-                help = "created is required")
-        parser.add_argument("last_visit", type = str, required = True,
-                help = "last_visit is required")
+        parser.add_argument("created", type = str)
+        parser.add_argument("last_visit", type = str)
         args = parser.parse_args()
         password = args.get("password")
         print(args)

@@ -65,6 +65,10 @@ class Analytics:
 
 
     def create(self, data):
+        if isinstance(data, dict):
+            data = (data.get("ip"), data.get("platform"), data.get("browser"), 
+                    data.get("city"), data.get("country"), 
+                    data.get("continent"), data.get("bot"), data.get("visits"))
         try:
             data = self.read(data)[0]
             self.update(data)

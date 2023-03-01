@@ -110,7 +110,7 @@ class Analytics:
             ip = (data[0],)
             sql += " WHERE ip = %s"
         sql += ";"
-        print(sql)
+        print(sql, ip)
         with psycopg2.connect(**ADMIN) as connection:
             cursor = connection.cursor()
             try:

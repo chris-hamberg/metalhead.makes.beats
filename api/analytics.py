@@ -69,6 +69,26 @@ class AnalyticsReadInterface(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument("password", type = str, required = True,
                 help = "Password is required")
+        parser.add_argument("ip", type = str, required = True,
+                help = "ip is required")
+        parser.add_argument("platform", type = str, required = True,
+                help = "platform is required")
+        parser.add_argument("browser", type = str, required = True,
+                help = "browser is required")
+        parser.add_argument("city", type = str, required = True,
+                help = "city is required")
+        parser.add_argument("country", type = str, required = True,
+                help = "country is required")
+        parser.add_argument("continent", type = str, required = True,
+                help = "continent is required")
+        parser.add_argument("bot", type = bool, required = True,
+                help = "bot is required")
+        parser.add_argument("visits", type = int, required = True,
+                help = "visits is required")
+        parser.add_argument("created", type = datetime, required = True,
+                help = "created is required")
+        parser.add_argument("last_visit", type = datetime, required = True,
+                help = "last_visit is required")
         args = parser.parse_args()
         password = args.get("password")
         if authenticated(password):

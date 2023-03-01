@@ -65,20 +65,25 @@ class Analytics:
 
 
     def create(self, data):
+        transform = None
         if isinstance(data, dict):
-            data = (data.get("ip"), data.get("platform"), data.get("browser"), 
-                    data.get("city"), data.get("country"), 
-                    data.get("continent"), data.get("bot"), data.get("visits"))
+            transform = (data.get("ip"), data.get("platform"), 
+                         data.get("browser"), data.get("city"), 
+                         data.get("country"), data.get("continent"), 
+                         data.get("bot"), data.get("visits"), 
+                         data.get("created"), data.get("last_visit"))
         try:
             data = self.read(data)[0]
             self.update(data)
         except IndexError:
-            sql = """INSERT INTO analytics 
-                     (ip, platform, browser, city, country, continent, bot, visits)
-                     VALUES
-                     (%s, %s, %s, %s, %s, %s, %s, %s);"""
-            if len(data) == 7:
-                data = data + (1,)
+            sql  = "INSERT INTO analytics (ip, platform, browser, city, "
+            sql += "country, continent, bot, visits"
+            if transform:
+                sql  += ", created, last_visit"
+                sql  += ") VALUES (" + "%s, " * 9 + " %s);"
+            else: 
+                sql  += ") VALUES (" + "%s, " * 7 + " %s);"
+                data += (1,)
             with psycopg2.connect(**ADMIN) as connection:
                 cursor = connection.cursor()
                 try:

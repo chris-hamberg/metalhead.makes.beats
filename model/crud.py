@@ -110,6 +110,7 @@ class Analytics:
             ip = (data[0],)
             sql += " WHERE ip = %s"
         sql += ";"
+        print(sql)
         with psycopg2.connect(**ADMIN) as connection:
             cursor = connection.cursor()
             try:
@@ -121,6 +122,7 @@ class Analytics:
             except psycopg2.OperationalError:
                 pass
             else:
+                print(data)
                 return data
             finally:
                 cursor.close()

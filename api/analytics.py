@@ -85,12 +85,17 @@ class AnalyticsReadInterface(Resource):
                 help = "bot is required")
         parser.add_argument("visits", type = int, required = True,
                 help = "visits is required")
-        parser.add_argument("created", type = str)
-        parser.add_argument("last_visit", type = str)
+        parser.add_argument("created", type = str, required = True,
+                help = "created is required")
+        parser.add_argument("last_visit", type = str, required = True,
+                help = "last_visit is required")
         args = parser.parse_args()
         password = args.get("password")
-        print(args)
         if authenticated(password):
+            strf       = "%a, %d %b %Y %H:%M:%S -0000"
+            created    = datetime.strptime(args.created, strf)
+            last_visit = datetime.strptime(args.last_visit, strf)
+            args.update({"created": created, "last_visit": last_visit})
             json = analytics.create(args)
             return json, 200
         else: return "Unauthorized", 401

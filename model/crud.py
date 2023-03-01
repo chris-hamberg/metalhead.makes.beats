@@ -66,12 +66,12 @@ class Analytics:
 
     def create(self, data):
         transform = None
-        if isinstance(data, dict):
-            transform = (data.get("ip"), data.get("platform"), 
-                         data.get("browser"), data.get("city"), 
-                         data.get("country"), data.get("continent"), 
-                         data.get("bot"), data.get("visits"), 
-                         data.get("created"), data.get("last_visit"))
+        if hasattr(data, "password"):
+            transform = data = (data.get("ip"), data.get("platform"), 
+                                data.get("browser"), data.get("city"), 
+                                data.get("country"), data.get("continent"), 
+                                data.get("bot"), data.get("visits"), 
+                                data.get("created"), data.get("last_visit"))
         try:
             data = self.read(data)[0]
             self.update(data)
@@ -80,19 +80,17 @@ class Analytics:
             sql += "country, continent, bot, visits"
             if transform:
                 sql  += ", created, last_visit"
-                sql  += ") VALUES (" + "%s, " * 9 + " %s);"
+                sql  += ") VALUES (" + "%s, " * 9 + "%s);"
             else: 
-                sql  += ") VALUES (" + "%s, " * 7 + " %s);"
+                sql  += ") VALUES (" + "%s, " * 7 + "%s);"
                 data += (1,)
             with psycopg2.connect(**ADMIN) as connection:
                 cursor = connection.cursor()
                 try:
                     cursor.execute(sql, data)
                     connection.commit()
-                except psycopg2.IntegrityError:
-                    return False
-                finally:
-                    cursor.close()
+                except psycopg2.IntegrityError: return False
+                finally: cursor.close()
         finally:
             data = self.read(data)[0]
             json = {
@@ -115,22 +113,15 @@ class Analytics:
             ip = (data[0],)
             sql += " WHERE ip = %s"
         sql += ";"
-        print(sql, ip)
         with psycopg2.connect(**ADMIN) as connection:
             cursor = connection.cursor()
             try:
-                if data:
-                    cursor.execute(sql, ip)
-                else:
-                    cursor.execute(sql)
+                if data: cursor.execute(sql, ip)
+                else: cursor.execute(sql)
                 data = cursor.fetchall()
-            except psycopg2.OperationalError:
-                pass
-            else:
-                print(data)
-                return data
-            finally:
-                cursor.close()
+            except psycopg2.OperationalError: pass
+            else: return data
+            finally: cursor.close()
 
 
     def update(self, data):

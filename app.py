@@ -191,7 +191,7 @@ def success():
     return render_template("success.html", base_url = base_url)
 
 
-#if __name__ == "__main__":
-#    app.run(host = app.config["HOST"],
-#            port = app.config["PORT"],
-#            debug = app.config["DEBUG"])
+if config == "model.conf":
+    app.run(host = app.config["HOST"],
+            port = app.config["PORT"],
+            debug = app.config["DEBUG"])

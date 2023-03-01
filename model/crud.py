@@ -77,7 +77,8 @@ class Analytics:
                      (ip, platform, browser, city, country, continent, bot, visits)
                      VALUES
                      (%s, %s, %s, %s, %s, %s, %s, %s);"""
-            data = data + (1,)
+            if len(data) == 7:
+                data = data + (1,)
             with psycopg2.connect(**ADMIN) as connection:
                 cursor = connection.cursor()
                 try:
